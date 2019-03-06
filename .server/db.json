@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "My event 1",
+      "location": "Praha 1",
+      "date": "2019-03-02T22:55:00.000Z",
+      "capacity": 0,
+      "free": true
+    },
+    {
+      "id": 2,
+      "name": "My event 2",
+      "location": "Praha 2",
+      "date": "2019-03-23T10:40:00.000Z",
+      "capacity": 1,
+      "free": false
+    },
+    {
+      "id": 3,
+      "name": "My event 3",
+      "location": "Praha 3",
+      "date": "2019-03-02T20:41:49.813Z",
+      "capacity": 2,
+      "free": true
+    }
+  ]
+}

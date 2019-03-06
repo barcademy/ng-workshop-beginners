@@ -1,0 +1,17 @@
+.action-bar {
+  display: flex;
+
+  .search-box {
+    flex: 1;
+  }
+
+  .create-new {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
