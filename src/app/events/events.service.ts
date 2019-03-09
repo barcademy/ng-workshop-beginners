@@ -7,7 +7,7 @@ import {map} from 'rxjs/operators';
 @Injectable({providedIn: 'root'})
 export class EventsService {
 
-  private readonly url = 'http://localhost:3000';
+  private readonly url = 'https://angular.gobuild.guru/ng-workshop';
 
   constructor(private http: HttpClient) {
 
@@ -27,6 +27,7 @@ export class EventsService {
     if (event.id) {
       return this.http.put(`${this.url}/events/${event.id}`, event);
     } else {
+      event.id = new Date().getTime();
       return this.http.post(`${this.url}/events`, event);
     }
   }

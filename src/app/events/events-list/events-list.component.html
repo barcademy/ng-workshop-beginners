@@ -29,7 +29,7 @@
       <div class="ui active centered inline loader"></div>
     </td>
   </tr>
-  <tr *ngIf="(events | search:keyword).length === 0">
+  <tr *ngIf="(events | search:keyword)?.length === 0">
     <td colspan="7">
       <div class="center aligned">No data</div>
     </td>
@@ -38,7 +38,7 @@
     <td>{{event.id}}</td>
     <td>{{event.name}}</td>
     <td>{{event.location}}</td>
-    <td>{{event.date | date:"short"}}</td>
+    <td>{{event.date | date:"medium"}}</td>
     <td>{{capacityMap.nameById(event.capacity)}}</td>
     <td><i [class.check]="event.free" class="icon"></i></td>
     <td class="nowrap">

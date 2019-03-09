@@ -7,7 +7,7 @@ import {Event} from '../event.model';
 export class SearchPipe implements PipeTransform {
 
   transform(events: Event[], keyword: string): Event[] {
-    if (keyword) {
+    if (keyword && events && events.length) {
       return events.filter(event =>
         event.name.toLowerCase().includes(keyword.toLowerCase()) || event.location.toLowerCase().includes(keyword.toLowerCase())
       );
