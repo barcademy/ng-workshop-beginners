@@ -23,12 +23,9 @@ export class EventsService {
     return this.httpClient.delete<EventModel>(this.url + '/events/' + id);
   }
 
-  getEvent(id: number) {
-
-  }
-
-  saveEvent() {
-
+  saveEvent(event: EventModel): Observable<EventModel> {
+    event.id = new Date().getTime();
+    return this.httpClient.post<EventModel>(this.url + '/events', event);
   }
 
 }
