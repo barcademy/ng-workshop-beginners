@@ -2,7 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <header>
+      <img src="assets/logo.png"/>
+      <span>NG Workshop</span>
+    </header>
+    
+    <router-outlet></router-outlet>
+  `,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {

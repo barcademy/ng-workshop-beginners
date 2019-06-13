@@ -1,0 +1,24 @@
+<div class="ui icon input">
+  <i class="search icon"></i>
+  <input type="text" placeholder="Search..." [(ngModel)]="keyword">
+</div>
+
+<table class="ui very compact table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Free</th>
+    <th>Actions</th>
+  </tr></thead>
+  <tbody>
+  <tr *ngFor="let event of (events | search:keyword)">
+    <td>{{event.id}}</td>
+    <td>{{event.name}}</td>
+    <td>{{event.location}}</td>
+    <td><i class="icon" [class.check]="event.free"></i></td>
+    <td><a href="javascript:void(0)" (click)="deleteEvent(event.id)">Delete</a></td>
+  </tr>
+  </tbody>
+</table>

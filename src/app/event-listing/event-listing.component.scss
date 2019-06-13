@@ -1,0 +1,23 @@
+header {
+  background-color: #0074a6;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 10px;
+
+  img {
+    height: 40px;
+    outline: none;
+  }
+
+  span {
+    color: white;
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.router-outlet {
+  padding: 20px;
+}
